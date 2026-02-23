@@ -1,4 +1,7 @@
 class Solution:    
     def findUnion(self, a, b):
         # code here
-        return set(a+b)
+        for ele in b:
+            a.append(ele)
+        
+        return list(dict.fromkeys(a))
